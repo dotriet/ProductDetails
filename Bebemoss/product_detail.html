@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="action.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <!-- first block - product block -->
+        <div id="product-block">
+            <!-- left division -->
+            <div id="left-image-div" style="margin-right: 30px;">
+                <!-- div contains main image -->
+                <div>
+                    <img src="https://bebemoss.com/cdn/shop/products/leo-the-lion-handmade-organic-cotton-toy-38260252049628_5000x.png?v=1668773614"
+                        alt="" id="main-image">
+                </div>
+                <!-- div contains sub image -->
+                <div style="display: flex; width: min-content;">
+                    <img src="https://bebemoss.com/cdn/shop/products/leo-the-lion-handmade-organic-cotton-toy-38260252049628_300x.png?v=1668773614"
+                        alt="" class="sub-image">
+                    <img src="https://bebemoss.com/cdn/shop/products/leo-the-lion-handmade-organic-cotton-toy-38260252999900_300x.png?v=1668773623"
+                        alt="" class="sub-image">
+                    <img src="https://bebemoss.com/cdn/shop/products/leo-the-lion-handmade-organic-cotton-toy-38260252967132_300x.png?v=1668773620"
+                        alt="" class="sub-image">
+                    <img src="https://bebemoss.com/cdn/shop/products/leo-the-lion-handmade-organic-cotton-toy-30336396755137_300x.jpg?v=1668773419"
+                        alt="" class="sub-image">
+                    <img src="https://bebemoss.com/cdn/shop/products/967430580-455fa63ffec4ae876df86d6ff68cf402ac003b02fa75c86b317c7c5399d1246b-d_295x166_f1d8dbbd-f811-449e-a280-d0de7c6439e4_300x.jpg?v=1660052829"
+                        alt="" class="sub-image" style="width: 120px; height: 60px;">
+                </div>
+            </div>
+            <!-- right division -->
+            <div id="right-description-div">
+                <h2 style="color: #d88f71;" class="product-detail">Leo the lion</h2>
+                <i class="fa-solid fa-star" style="color: #777318;"></i>
+                <i class="fa-solid fa-star" style="color: #777318;"></i>
+                <i class="fa-solid fa-star" style="color: #777318;"></i>
+                <i class="fa-solid fa-star" style="color: #777318;"></i>
+                <i class="fa-solid fa-star" style="color: #777318;"></i>
+                <p style="font-family: Lato,sans-serif; font-size: 20px;" class="product-detail">1,468,000đ</p>
+                <p style="font-size: 15px;" class="product-detail">Qty</p>
+                <!-- div contains quantity button, buy butotn -->
+                <div id="quantity-and-buy-product" style="display: flex; align-items: center;">
+                    <div id="quantity">
+                        <button class="modify-quantity-btn" onclick="descreaseQuantity()">-</button>
+                        <input type="text" id="ip-text-quantity" value="1" onkeypress="return isNumberKey(event)">
+                        <button class="modify-quantity-btn" onclick="increaseQuantity()">+</button>
+                    </div>
+                    <button type="submit" id="add-to-cart-btn">ADD TO
+                        CART</button>
+                </div>
+                <p style="margin-top: 40px; font-size: 20px;">Leo makes new friends wherever he goes. He is very proud
+                    of his beautiful mane and tail.</p>
+                <p style="margin-top: 40px; font-size: 20px;">Books with Lions: Dandelion, The Lion Inside, Lion
+                    Lessons, When Your Lion Needs a Bath</p>
+                <p style="margin-top: 40px; font-size: 20px;">Fun Fact about Lions: Lions are the only cats who live in
+                    groups. A group of lions is called a “pride”.</p>
+                <!-- hr tag -->
+                <hr>
+                <!-- hr tag -->
+                <!-- tab block: just the facts -->
+                <div class="tab-bl" onclick="changeTheFacts()">
+                    <h3 class="tab-title">Just the facts</h3>
+                    <div class="icon-container">
+                        <i id="plus-icon-facts" class="fa-sharp fa-solid fa-plus fa-xl" style="color: #c8cbd0;"></i>
+                    </div>
+                </div>
+                <!-- tab content -->
+                <ul class="tab-content facts">
+                    <li class="my-li">Materials: Shell - GOTS Certified Premium Organic Cotton</li>
+                    <li class="my-li">Filling - Hypoallergenic poly-fill made from recycled bottles. Learn more.</li>
+                    <li class="my-li">Height: 15.7” / 40 cm</li>
+                    <li class="my-li">Length: 6.6” / 17 cm</li>
+                    <li class="my-li">Width: 4.3”/ 11 cm</li>
+                    <li class="my-li">Age: 0-onwards</li>
+                    <li class="my-li">Meets EU EN 71 Safety Requirements.</li>
+                    <li class="my-li">Comes ready to gift in a cotton pouch and a card with the name of the artisan
+                        mother who made
+                        it.</li>
+                </ul>
+
+                <hr style="border: 2px solid #EFEFEF;">
+
+                <!-- tab block: change impacts -->
+                <div class="tab-bl" onclick="changeImpacts()">
+                    <h3 class="tab-title">Your Impacts</h3>
+                    <div class="icon-container">
+                        <i id="plus-icon-impacts" class="fa-sharp fa-solid fa-plus fa-xl" style="color: #c8cbd0;"></i>
+                    </div>
+                </div>
+                <!-- tab content -->
+                <ul class="tab-content impacts">
+                    <p class="my-li">This toy was hand-crocheted in Istanbul, Turkey by a mother in need.</p>
+                    <p class="my-li">Your purchase allows us to pay a fair trade wage that helps lift families out of
+                        poverty.</p>
+                    <a href="">Learn more</a>
+                </ul>
+                <!-- hr -->
+                <hr>
+                <!-- hr -->
+            </div>
+        </div>
+        <!-- end of first block -->
+
+        <!-- second block - overall review -->
+        <div id="overview-comment-block" style="text-align: center; ">
+            <!-- from our customer -->
+            <h2 id="heading2">From our customers</h2>
+
+            <!-- overall rating -->
+            <div id="overall-rating">
+                <!-- left division of overall rating -->
+                <div id="left-div-overall">
+                    <!-- top sub div -->
+                    <div style="display: flex;">
+                        <i class="fa-solid fa-star" style="color: #777318;"></i>
+                        <i class="fa-solid fa-star" style="color: #777318;"></i>
+                        <i class="fa-solid fa-star" style="color: #777318;"></i>
+                        <i class="fa-solid fa-star" style="color: #777318;"></i>
+                        <i class="fa-solid fa-star" style="color: #777318;"></i>
+                        <p style="margin: 0px; margin-left: 5px;">5.00 out of 5</p>
+                    </div>
+                    <!-- bottom sub div -->
+                    <div style="margin: 0px; text-align: left;">
+                        Based on 46 reviews
+                    </div>
+                </div>
+
+                <!-- middle vertical line -->
+                <div id="vertical-line"></div>
+
+                <!-- right division -->
+                <div id="right-div-overall" style="margin-left: 40px;">
+                    <!-- 5 stars -->
+                    <div class="quantity-star-rating-div">
+                        <i class="fa-solid fa-star fa-xs" style="color: #777318;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #777318;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #777318;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #777318;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #777318;"></i>
+
+                        <div class="showing-star-rating"></div>
+
+                        <p class="quantity-review">46</p>
+                    </div>
+                    <!-- 4 stars -->
+                    <div class="quantity-star-rating-div">
+                        <i class="fa-solid fa-star fa-xs" style="color: #777318;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #777318;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #777318;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #777318;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color: #4d4912;"></i>
+
+                        <div class="showing-star-rating" style="background-color: #EFEFEF;"></div>
+
+                        <p class="quantity-review">0</p>
+                    </div>
+                    <!-- 3 stars -->
+                    <div class="quantity-star-rating-div">
+                        <i class="fa-solid fa-star fa-xs" style="color: #777318;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #777318;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #777318;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color: #4d4912;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color: #4d4912;"></i>
+
+                        <div class="showing-star-rating" style="background-color: #EFEFEF;"></div>
+
+                        <p class="quantity-review">0</p>
+                    </div>
+                    <!-- 2 stars -->
+                    <div class="quantity-star-rating-div">
+                        <i class="fa-solid fa-star fa-xs" style="color: #777318;"></i>
+                        <i class="fa-solid fa-star fa-xs" style="color: #777318;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color: #4d4912;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color: #4d4912;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color: #4d4912;"></i>
+
+                        <div class="showing-star-rating" style="background-color: #EFEFEF;"></div>
+
+                        <p class="quantity-review">0</p>
+                    </div>
+                    <!-- 1 stars -->
+                    <div class="quantity-star-rating-div">
+                        <i class="fa-solid fa-star fa-xs" style="color: #777318;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color: #4d4912;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color: #4d4912;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color: #4d4912;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color: #4d4912;"></i>
+
+                        <div class="showing-star-rating" style="background-color: #EFEFEF;"></div>
+
+                        <p class="quantity-review">0</p>
+                    </div>
+                    <!-- 0 stars -->
+                    <div class="quantity-star-rating-div">
+                        <i class="fa-regular fa-star fa-xs" style="color: #4d4912;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color: #4d4912;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color: #4d4912;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color: #4d4912;"></i>
+                        <i class="fa-regular fa-star fa-xs" style="color: #4d4912;"></i>
+
+                        <div class="showing-star-rating" style="background-color: #EFEFEF;"></div>
+
+                        <p class="quantity-review">0</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="double-recognition-img">
+                <img src="https://judgeme-public-images.imgix.net/judgeme/medals-v2/auth/diamond.svg?auto=format" alt=""
+                    class="recog-img">
+                <img src="https://judgeme-public-images.imgix.net/judgeme/medals-v2/tran/gold.svg?auto=format" alt=""
+                    class="recog-img">
+            </div>
+            <hr>
+        </div>
+        <!-- end of second block -->
+
+        <!-- third block - comment block -->
+        <div id="comment-block">
+            <!-- div contains <select> category comment -->
+            <!-- sub block of comment block -->
+            <div>
+                <select name="" id="category-comment">
+                    <option value="most recent">Most recent</option>
+                    <option value="highest rating">Highest rating</option>
+                    <option value="lowest rating">Lowest rating</option>
+                    <option value="only pictures">Only picture</option>
+                    <option value="pictures first">Pictures first</option>
+                    <option value="videos first">Videos first</option>
+                    <option value="most helpful">Most helpful</option>
+                </select>
+
+                <hr>
+            </div>
+            <!-- div contains each customer's comment -->
+            <div class="total-customer-comment-div">
+                <!-- 1 -->
+                <div class="time-rating-stars-div" style="margin-top: 20px;">
+                    <div style="display: flex; position: relative;">
+                        <div class="star-in-comment-div">
+                            <i class="fa-solid fa-star" style="color: #777318;"></i>
+                            <i class="fa-solid fa-star" style="color: #777318;"></i>
+                            <i class="fa-solid fa-star" style="color: #777318;"></i>
+                            <i class="fa-solid fa-star" style="color: #777318;"></i>
+                            <i class="fa-solid fa-star" style="color: #777318;"></i>
+                        </div>
+                        <p class="date-comment-para">05/01/2023</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="information-of-customer" style="display: flex;">
+                    <!-- 2.a -->
+                    <div class="avatar-of-customer">
+                        <i class="fa-solid fa-user fa-lg" style="color: #339999;"></i>
+                        <div class="small-icon-avatar">
+                            <i class="fa-solid fa-check fa-xs" style="color: white;"></i>
+                        </div>
+                    </div>
+                    <!-- 2.b -->
+                    <div class="name-of-customer">Pam Dixon</div>
+                    <div class="verified-icon">Verified</div>
+                </div>
+                <!-- 3 -->
+                <div class="automatic-comment-div">So cute</div>
+                <div class="detail-comment-div">
+                    The lion is just precious! <br>
+                    We love it for our grandson! Judah🦁
+                </div>
+
+                <hr>
+            </div>
+
+        </div>
+        <!-- end of third block -->
+
+        <!-- fourth block -->
+        <!-- extra product block -->
+        <div id="extra-product-block" style="margin-top: 50px;">
+            <div id="number-of-page">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-1-circle-fill" viewBox="0 0 16 16" style="cursor: pointer;">
+                    <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-2-circle" viewBox="0 0 16 16" style="cursor: pointer;">
+                    <path
+                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24v.07H5.375v-.064c0-1.213.879-2.402 2.637-2.402 1.582 0 2.613.949 2.613 2.215 0 1.002-.6 1.667-1.287 2.43l-.096.107-1.974 2.22v.077h3.498V12H5.422v-.832l2.97-3.293c.434-.475.903-1.008.903-1.705 0-.744-.557-1.236-1.313-1.236-.843 0-1.336.615-1.336 1.306Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-3-circle" viewBox="0 0 16 16" style="cursor: pointer;">
+                    <path
+                        d="M7.918 8.414h-.879V7.342h.838c.78 0 1.348-.522 1.342-1.237 0-.709-.563-1.195-1.348-1.195-.79 0-1.312.498-1.348 1.055H5.275c.036-1.137.95-2.115 2.625-2.121 1.594-.012 2.608.885 2.637 2.062.023 1.137-.885 1.776-1.482 1.875v.07c.703.07 1.71.64 1.734 1.917.024 1.459-1.277 2.396-2.93 2.396-1.705 0-2.707-.967-2.754-2.144H6.33c.059.597.68 1.06 1.541 1.066.973.006 1.6-.563 1.588-1.354-.006-.779-.621-1.318-1.541-1.318Z" />
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-right-short" viewBox="0 0 16 16" style="cursor: pointer;">
+                    <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                </svg>
+            </div>
+
+            <h2 id="heading2">You may also like</h2>
+            <!-- row div -->
+            <div class="extra-product-div">
+                <div class="product">
+                    <img src="https://cdn.shopify.com/s/files/1/0220/6428/products/azalea-the-mermaid-blonde-handmade-organic-cotton-stuffed-animal-38096470737116_400x.jpg?v=1666175675"
+                        alt="" class="product-img">
+                    <p class="heading2 prt-name-price">Azalea the Mermaid- blonde</p>
+                    <p class="heading2 prt-name-price">1,471,000đ</p>
+                </div>
+
+                <div class="product">
+                    <img src="https://cdn.shopify.com/s/files/1/0220/6428/products/azalea-the-mermaid-blonde-handmade-organic-cotton-stuffed-animal-38096470737116_400x.jpg?v=1666175675"
+                        alt="" class="product-img">
+                    <p class="heading2 prt-name-price">Azalea the Mermaid- blonde</p>
+                    <p class="heading2 prt-name-price">1,471,000đ</p>
+                </div>
+
+                <div class="product">
+                    <img src="https://cdn.shopify.com/s/files/1/0220/6428/products/azalea-the-mermaid-blonde-handmade-organic-cotton-stuffed-animal-38096470737116_400x.jpg?v=1666175675"
+                        alt="" class="product-img">
+                    <p class="heading2 prt-name-price">Azalea the Mermaid- blonde</p>
+                    <p class="heading2 prt-name-price">1,471,000đ</p>
+                </div>
+
+                <div class="product">
+                    <img src="https://cdn.shopify.com/s/files/1/0220/6428/products/azalea-the-mermaid-blonde-handmade-organic-cotton-stuffed-animal-38096470737116_400x.jpg?v=1666175675"
+                        alt="" class="product-img">
+                    <p class="heading2 prt-name-price">Azalea the Mermaid- blonde</p>
+                    <p class="heading2 prt-name-price">1,471,000đ</p>
+                </div>
+
+            </div>
+            <!-- end of row div -->
+
+
+        </div>
+        <!-- end of fourth block -->
+
+
+    </div>
+</body>
+
+</html>
